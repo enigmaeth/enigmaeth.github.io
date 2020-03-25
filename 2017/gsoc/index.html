@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang=EN>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="I worked on FOSSASIA’s Open Event Server in Google Summer of Code 2017.  IntroductionThe Open Event Orga Server had frontend and backend tightly coupled with each other with lots of logic written ins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google Summer of Code 2017">
+<meta property="og:url" content="http://enigmaeth.github.io/2017/gsoc/index.html">
+<meta property="og:site_name" content="Afroz Ahamad">
+<meta property="og:description" content="I worked on FOSSASIA’s Open Event Server in Google Summer of Code 2017.  IntroductionThe Open Event Orga Server had frontend and backend tightly coupled with each other with lots of logic written ins">
+<meta property="og:locale" content="EN-US">
+<meta property="og:image" content="https://musescore.org/sites/musescore.org/files/Capture%20d%27e%CC%81cran%202016-03-01%2009.48.11_0.png">
+<meta property="og:image" content="https://i.imgur.com/huqOsbJ.png">
+<meta property="og:updated_time" content="2018-12-02T10:40:55.323Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Google Summer of Code 2017">
+<meta name="twitter:description" content="I worked on FOSSASIA’s Open Event Server in Google Summer of Code 2017.  IntroductionThe Open Event Orga Server had frontend and backend tightly coupled with each other with lots of logic written ins">
+<meta name="twitter:image" content="https://musescore.org/sites/musescore.org/files/Capture%20d%27e%CC%81cran%202016-03-01%2009.48.11_0.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Google Summer of Code 2017</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="../../css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../research/">Publications</a></li>
+         
+          <li><a href="../../archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../2018/st-gan/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://enigmaeth.github.io/2017/gsoc/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://enigmaeth.github.io/2017/gsoc/&text=Google Summer of Code 2017"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://enigmaeth.github.io/2017/gsoc/&is_video=false&description=Google Summer of Code 2017"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Google Summer of Code 2017&body=Check out this article: http://enigmaeth.github.io/2017/gsoc/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://enigmaeth.github.io/2017/gsoc/&name=Google Summer of Code 2017&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-Achieved"><span class="toc-number">2.</span> <span class="toc-text">Goals Achieved</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-of-contributions"><span class="toc-number">3.</span> <span class="toc-text">List of contributions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Additional-Links"><span class="toc-number">4.</span> <span class="toc-text">Additional Links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Social-Outreach"><span class="toc-number">5.</span> <span class="toc-text">Social Outreach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FOSSASIA-Meetup-at-BITS-Pilani-Hyderabad"><span class="toc-number">6.</span> <span class="toc-text">FOSSASIA Meetup at BITS Pilani Hyderabad</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Google Summer of Code 2017
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+          <a class="a_name" href="/about/">afrozsahamad</a>
+        </span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-09-06T09:43:25.000Z" itemprop="datePublished">Sep 06, 2017</time>
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="https://musescore.org/sites/musescore.org/files/Capture%20d%27e%CC%81cran%202016-03-01%2009.48.11_0.png" alt="GSoC 2017"></p>
+<p>I worked on FOSSASIA’s Open Event Server in Google Summer of Code 2017. </p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The <a href="https://github.com/fossasia/open-event-orga-server" target="_blank" rel="noopener">Open Event Orga Server</a> had frontend and backend tightly coupled with each other with lots of logic written inside the template files. Since there are other client web and Android apps(</p>
+<ul>
+<li><a href="https://github.com/fossasia/open-event-orga-app" target="_blank" rel="noopener">Open Event Organising App</a>,</li>
+<li><a href="https://github.com/fossasia/open-event-android" target="_blank" rel="noopener">Open Event Android App</a>, </li>
+<li><a href="https://github.com/fossasia/open-event-webapp" target="_blank" rel="noopener">Open Event Web App</a><br>that share the data with the main server, an API centric approach would have been the best option for the <a href="http://blog.fossasia.org/open-event-ecosystem" target="_blank" rel="noopener">Open Event Ecosystem</a>. </li>
+</ul>
+<p>The goal of this GSoC project was to refactor the current project and decouple the backend making it just an API server, with the frontend being developed under a different project - <a href="https://github.com/fossasia/open-event-frontend" target="_blank" rel="noopener">Open Event Frontend</a>. </p>
+<hr>
+<h3 id="Goals-Achieved"><a href="#Goals-Achieved" class="headerlink" title="Goals Achieved"></a>Goals Achieved</h3><p>Here’s a short video on the work done during the coding period.  </p>
+<div align="center"><br><a href="https://www.youtube.com/watch?v=Ub2bbKXnRUg" target="_blank"><img src="https://i.imgur.com/huqOsbJ.png" alt="Open Event API Server"></a><br></div>
+
+
+
+<p>The following goals were achieved during GSoC 2017:</p>
+<ul>
+<li>Implement a JSONAPI 1.0 specification compliant API for Open Event Server </li>
+<li>Refactor and upgrade database models according to need</li>
+<li>Interactive documentation of all endpoints using Apiary API Blueprint.</li>
+<li>Test for documentation of all endpoints using Dredd and FactoryBoy </li>
+</ul>
+<hr>
+<h3 id="List-of-contributions"><a href="#List-of-contributions" class="headerlink" title="List of contributions"></a>List of contributions</h3><p>Apart from the Open Event API Server Project, I also worked on <a href="https://github.com/fossasia/query-server" target="_blank" rel="noopener">Query Server</a> and <a href="https://github.com/fossasia/labs.fossasia.org" target="_blank" rel="noopener">FOSSASIA Labs</a> repository.</p>
+<ul>
+<li>Open Event API Server  <ul>
+<li><a href="https://github.com/fossasia/open-event-orga-server/commits?author=enigmaeth" target="_blank" rel="noopener">Commits</a>  </li>
+<li><a href="https://github.com/fossasia/open-event-orga-server/issues?utf8=%E2%9C%93&amp;q=assignee%3Aenigmaeth" target="_blank" rel="noopener">Issues and Pull Requests</a></li>
+<li>Discussions<ul>
+<li><a href="https://github.com/search?q=org%3Afossasia+enigmaeth&amp;type=Issues" target="_blank" rel="noopener">on GitHub</a></li>
+<li><a href="https://gitter.im/fossasia/open-event-orga-server" target="_blank" rel="noopener">on Chat Channels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Query Server  <ul>
+<li><a href="https://github.com/fossasia/query-server/commits?author=enigmaeth" target="_blank" rel="noopener">Commits</a>  </li>
+<li><a href="https://github.com/fossasia/query-server/issues?utf8=%E2%9C%93&amp;q=assignee%3Aenigmaeth" target="_blank" rel="noopener">Issues and Pull Requests</a></li>
+</ul>
+</li>
+<li>FOSSASIA Labs  <ul>
+<li><a href="https://github.com/fossasia/labs.fossasia.org/commits?author=enigmaeth" target="_blank" rel="noopener">Commits</a>  </li>
+<li><a href="https://github.com/fossasia/labs.fossasia.org/issues?utf8=%E2%9C%93&amp;q=assignee%3Aenigmaeth" target="_blank" rel="noopener">Issues and Pull Requests</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Additional-Links"><a href="#Additional-Links" class="headerlink" title="Additional Links"></a>Additional Links</h3><ul>
+<li><a href="http://blog.fossasia.org/author/enigmaeth/" target="_blank" rel="noopener">Blogposts published during GSoC 2017</a></li>
+<li><a href="https://groups.google.com/forum/#!searchin/open-event/subject$3AAfroz$20AND$20subject$3AAhamad%7Csort:date" target="_blank" rel="noopener">Daily Scrums</a></li>
+<li><a href="https://github.com/enigmaeth?utf8=%E2%9C%93&amp;tab=repositories&amp;q=gsoc-2017&amp;type=&amp;language=" target="_blank" rel="noopener">Personal Repositories used for Testing</a></li>
+<li><a href="https://enigmaeth-open-event.surge.sh" target="_blank" rel="noopener">Cloud deployement of Open Event Orga Server</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ub2bbKXnRUg" target="_blank" rel="noopener">Link to Screencast published on FOSSASIA YouTube Channel</a></li>
+<li><a href="https://docs.google.com/presentation/d/1lKjOSytygmH6IK1VGK_e0l27zjrlqrsLWEzOxtHDhtw/edit#slide=id.gc6fa3c898_0_0" target="_blank" rel="noopener">Final Presentation Link</a></li>
+</ul>
+<hr>
+<h3 id="Social-Outreach"><a href="#Social-Outreach" class="headerlink" title="Social Outreach"></a>Social Outreach</h3><ul>
+<li><a href="https://twitter.com/enigmaeth" target="_blank" rel="noopener">Blog Posts Tweets</a></li>
+<li><a href="https://www.facebook.com/search/str/afroz+open+event/keywords_blended_posts" target="_blank" rel="noopener">Blog Posts Facebook Share</a></li>
+</ul>
+<hr>
+<h3 id="FOSSASIA-Meetup-at-BITS-Pilani-Hyderabad"><a href="#FOSSASIA-Meetup-at-BITS-Pilani-Hyderabad" class="headerlink" title="FOSSASIA Meetup at BITS Pilani Hyderabad"></a>FOSSASIA Meetup at BITS Pilani Hyderabad</h3><p>I, along with <a href="https://github.com/skrpl" target="_blank" rel="noopener">SkrPl</a>, organized a FOSSASIA meetup at BITS Pilani Hyderabad Campus, Hyderabad, India. Around 50 undergrad students attended the event. The meetup was aimed at giving an insight on Open Source software and what the Google Summer of Code programme is. This was followed by a hands-on session of installing various FOSSASIA Projects and getting started with first contributions. We managed to install <a href="https://github.com/fossasia/open-event-orga-server" target="_blank" rel="noopener">Open Event Orga Server</a>, <a href="https://github.com/fossasia/loklak_wok_android" target="_blank" rel="noopener">LokLak Wok Android</a> and <a href="https://github.com/loklak/loklak_server" target="_blank" rel="noopener">Loklak server</a> on the attendees’ systems, depending on what the person was interested and experienced in, like Python or JAVA or Android App Development. These are the related links for the event.</p>
+<ul>
+<li><a href="https://www.facebook.com/events/1052881531508818/" target="_blank" rel="noopener">Facebook Event</a>  </li>
+<li><a href="https://twitter.com/search?f=tweets&amp;q=fossasia%20hyderabad%20gsoc&amp;src=typd" target="_blank" rel="noopener">Tweets</a>  </li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../research/">Publications</a></li>
+         
+          <li><a href="../../archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goals-Achieved"><span class="toc-number">2.</span> <span class="toc-text">Goals Achieved</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-of-contributions"><span class="toc-number">3.</span> <span class="toc-text">List of contributions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Additional-Links"><span class="toc-number">4.</span> <span class="toc-text">Additional Links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Social-Outreach"><span class="toc-number">5.</span> <span class="toc-text">Social Outreach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FOSSASIA-Meetup-at-BITS-Pilani-Hyderabad"><span class="toc-number">6.</span> <span class="toc-text">FOSSASIA Meetup at BITS Pilani Hyderabad</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://enigmaeth.github.io/2017/gsoc/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://enigmaeth.github.io/2017/gsoc/&text=Google Summer of Code 2017"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://enigmaeth.github.io/2017/gsoc/&is_video=false&description=Google Summer of Code 2017"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Google Summer of Code 2017&body=Check out this article: http://enigmaeth.github.io/2017/gsoc/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://enigmaeth.github.io/2017/gsoc/&title=Google Summer of Code 2017"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://enigmaeth.github.io/2017/gsoc/&name=Google Summer of Code 2017&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div style="width: 110%; color: red;"><hr style="color: red;"/></div>
+  <!-- <div class="footer-left"> -->
+    <!-- Copyright &copy; 2020 afrozsahamad -->
+  <!-- </div> -->
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../research/">Publications</a></li>
+         
+          <li><a href="../../archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="../../lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="../../lib/jquery/jquery.min.js"></script>
+<script src="../../lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="../../js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-130229762-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

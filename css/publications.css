@@ -1,0 +1,33 @@
+.authors {
+  text-transform: titlecase;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: -3.5em;
+}
+.publication_title {
+  text-transform: titlecase;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: -1.5em;
+}
+.journal {
+  text-transform: titlecase;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: #99f;
+  margin-bottom: -1.5em;
+}
+.description {
+  text-transform: titlecase;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-size: 1em;
+  color: #777;
+  margin-bottom: -2em;
+}
+.publication_links {
+  text-transform: none;
+  margin-top: -1.5em;
+}
